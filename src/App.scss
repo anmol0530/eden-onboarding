@@ -1,0 +1,241 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+
+  header {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  .main {
+    height: 70vh;
+  }
+}
+
+.steps {
+  display: flex;
+  margin-bottom: 50px;
+
+  .step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .circle {
+      /* text-align: center; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      align-self: flex-start;
+      border: 1px solid rgba(128, 128, 128, 0.188);
+      cursor: pointer;
+    }
+
+    .circle.blue {
+      background: rgb(102, 77, 229);
+      color: white;
+    }
+
+    .vr {
+      width: 35px;
+      height: 0;
+      border-top: 1px solid rgba(128, 128, 128, 0.188);
+    }
+
+    .vr.blue {
+      border-top: 1px solid rgb(102, 77, 229);
+    }
+  }
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .congrats {
+    margin: 50px 0 20px 0;
+  }
+
+  hgroup {
+    margin-bottom: 30px;
+
+    h1 {
+      word-spacing: -4px;
+    }
+
+    h4 {
+      opacity: 0.5;
+    }
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 380px;
+    gap: 7px;
+
+    label {
+      font-size: small;
+      font-weight: 550;
+
+      span {
+        opacity: 0.3;
+      }
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 18px;
+      outline: none;
+      padding: 15px;
+      border: 1px solid rgba(128, 128, 128, 0.266);
+      border-radius: 7px;
+      font-size: larger;
+
+      &::placeholder {
+        font-weight: 500;
+        font-size: 15px;
+      }
+    }
+
+    .url-input {
+      display: flex;
+      width: 100%;
+
+      .url-head {
+        width: 60%;
+        border-radius: 7px 0 0 7px;
+      }
+
+      .url-main {
+        border-radius: 0 7px 7px 0;
+      }
+    }
+
+    button {
+      width: 100%;
+      background: #664de5;
+      padding: 18px 0;
+      border: 0;
+      border-radius: 7px;
+      outline: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .plans {
+      display: flex;
+      gap: 20px;
+
+      div {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        height: 180px;
+        margin-bottom: 16px;
+        border: 2px solid rgba(128, 128, 128, 0.244);
+        border-radius: 7px;
+        padding: 25px;
+        cursor: pointer;
+
+        &.border-blue {
+          box-sizing: border-box;
+          border: 2px solid #664de5;
+        }
+
+        img {
+          width: 25px;
+          height: 25px;
+          margin-bottom: 25px;
+        }
+
+        svg path {
+          fill: red;
+        }
+
+        .plan-name {
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+
+        .plan-details {
+          opacity: 0.6;
+          font-size: small;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .welcome form {
+    width: 100%;
+  }
+
+  .steps .step .vr {
+    width: 20px;
+  }
+
+  header {
+    margin-top: 30px;
+  }
+
+  .welcome hgroup h1 {
+    font-size: 1.5em;
+  }
+
+  .welcome hgroup h4 {
+    font-size: 0.9em;
+  }
+
+  .welcome {
+    padding: 0 15px;
+    margin-bottom: 10px;
+  }
+
+  .welcome form .plans div {
+    height: unset;
+  }
+
+  .welcome form input {
+    padding: 12px;
+  }
+
+  .App .main {
+    height: unset;
+  }
+
+  .App header {
+    margin: 15px 0 20px 0;
+  }
+
+  .steps {
+    margin-bottom: 30px;
+  }
+
+  .welcome form .plans div {
+    padding: 20px;
+  }
+}
