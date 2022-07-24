@@ -6,7 +6,6 @@ const Steps = (props) => {
           <div
             className="step"
             key={index}
-            onClick={() => props.onChange(index)}
           >
             {index > 0 && (
               <div className={index + 1 <= props.current ? "vr blue" : "vr"} />

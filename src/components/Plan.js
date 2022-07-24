@@ -26,7 +26,7 @@ export const Plan = ({ next }) => {
                     </div>
                     <div className={isTeamPlan ? "border-blue" : ""} onClick={()=> setIsTeamPlan(true)}>
                         <img src={isTeamPlan ? teamBlue : team } alt="team-icon" />
-                        <span className="plan-name">For myself</span>
+                        <span className="plan-name">With my team</span>
                         <span className="plan-details">Wikis, docs, tasks and projects, all in one place.</span>
                     </div>
                 </div>

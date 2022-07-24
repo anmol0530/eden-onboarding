@@ -9,11 +9,10 @@ import { Congratulations } from './components/Congratulations';
 
 function App() {
   const [current, setCurrent] = useState(1);
+  const [name, setName] = useState("");
+  const [displayName, setDisplayName] = useState("");
+  const [workspace, setWorkspace] = useState("");
 
-  const onChange = (id) => {
-    setCurrent(id + 1);
-  };
-  
   const next = () => {
     setCurrent(prev => prev + 1);
   }
@@ -26,19 +25,19 @@ function App() {
         <h1>Eden</h1>
       </header>
 
-      <Steps current={current} onChange={onChange} />
+      <Steps current={current} />
 
       <div className="main">
         {(() => {
           switch (current) {
             case 1:
-              return <Welcome next={next} />;
+              return <Welcome next={next} name={name} setName={setName} displayName={displayName} setDisplayName={setDisplayName} />;
             case 2:
-              return <Workspace next={next} />;
+              return <Workspace next={next} workspace={workspace} setWorkspace={setWorkspace} />;
             case 3:
               return <Plan next={next} />;
             case 4:
-              return <Congratulations next={next} />;
+              return <Congratulations name={name} displayName={displayName} />;
             default:
               (console.log('This is a multi-step form built with React.'))
           }

@@ -1,4 +1,5 @@
 .App {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +44,7 @@
       height: 40px;
       align-self: flex-start;
       border: 1px solid rgba(128, 128, 128, 0.188);
-      cursor: pointer;
+      cursor: default;
     }
 
     .circle.blue {
@@ -77,7 +78,7 @@
     margin-bottom: 30px;
 
     h1 {
-      word-spacing: -4px;
+      word-spacing: -2px;
     }
 
     h4 {
@@ -115,6 +116,10 @@
       &::placeholder {
         font-weight: 500;
         font-size: 15px;
+      }
+
+      &.red {
+        border: 3px solid red;
       }
     }
 
@@ -204,6 +209,7 @@
 
   .welcome hgroup h1 {
     font-size: 1.5em;
+    word-spacing: -1px;
   }
 
   .welcome hgroup h4 {
